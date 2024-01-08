@@ -14,6 +14,7 @@ Para uso da aplicação, o usuário poderá cadastrar produtos em:
 POST /api/Products
 
 Poderá ser informado os campos, conforme exemplo abaixo:
+```
 {
     "product": {
         "Reference": "ex123",
@@ -22,11 +23,13 @@ Poderá ser informado os campos, conforme exemplo abaixo:
         "Category": "Sapato"
     }
 }
+```
 
 Para alteração:
 PUT /api/Products
 
 Deverá ser informado obrigatoriamente o campo Id e opcionalmente os demais campos, conforme exemplo abaixo:
+```
 {
     "product": {
         "id": "fd14f322-6f53-4f03-8773-222b1237c96c",
@@ -36,34 +39,41 @@ Deverá ser informado obrigatoriamente o campo Id e opcionalmente os demais camp
         "Category": "Sapato"
     }
 }
+```
 
 Para busca por categoria:
 GET /api/GetProductsByCategory
 
 Deverá ser informado obrigatoriamente o campo partitionKey, conforme exemplo abaixo:
+```
 {
     "partitionKey": "Sapato",
 }
+```
 
 Para busca por ID:
 GET /api/GetProductById
 
 Deverá ser informado obrigatoriamente o campo Id e partitionKey, conforme exemplo abaixo:
+```
 {
     "id": "fd14f322-6f53-4f03-8773-222b1237c96c",
     "partitionKey": "Sapato",
 }
+```
 
 Para deleção:
 DELETE /api/Products
 
 Deverá ser informado obrigatoriamente o campo Id e Category, conforme exemplo abaixo:
+```
 {
     "product": {
         "id": "fd14f322-6f53-4f03-8773-222b1237c96c",
         "Category": "Sapato",
     }
 }
+```
 
 ## Execução:
 
