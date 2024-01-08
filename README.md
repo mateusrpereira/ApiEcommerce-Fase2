@@ -11,6 +11,7 @@ Disponibilizar endpoints para listar os Produtos por ID e por Categoria.
 
 ## Critérios de aceite:
 Para uso da aplicação, o usuário poderá cadastrar produtos em:
+
 POST /api/Products
 
 Poderá ser informado os campos, conforme exemplo abaixo:
@@ -26,6 +27,7 @@ Poderá ser informado os campos, conforme exemplo abaixo:
 ```
 
 Para alteração:
+
 PUT /api/Products
 
 Deverá ser informado obrigatoriamente o campo Id e opcionalmente os demais campos, conforme exemplo abaixo:
@@ -42,6 +44,7 @@ Deverá ser informado obrigatoriamente o campo Id e opcionalmente os demais camp
 ```
 
 Para busca por categoria:
+
 GET /api/GetProductsByCategory
 
 Deverá ser informado obrigatoriamente o campo partitionKey, conforme exemplo abaixo:
@@ -52,6 +55,7 @@ Deverá ser informado obrigatoriamente o campo partitionKey, conforme exemplo ab
 ```
 
 Para busca por ID:
+
 GET /api/GetProductById
 
 Deverá ser informado obrigatoriamente o campo Id e partitionKey, conforme exemplo abaixo:
@@ -63,6 +67,7 @@ Deverá ser informado obrigatoriamente o campo Id e partitionKey, conforme exemp
 ```
 
 Para deleção:
+
 DELETE /api/Products
 
 Deverá ser informado obrigatoriamente o campo Id e Category, conforme exemplo abaixo:
