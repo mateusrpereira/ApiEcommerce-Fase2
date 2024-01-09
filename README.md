@@ -125,4 +125,29 @@ OBS.: Caso o build não seja executado de forma automática, verifique a branch 
 func azure functionapp publish name_function_app
 ```
 
+Caso utilize o VSCode para rodar o projeto, será necessário a utilização das extensões abaixo:
+
+- Azure Tools (https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)
+- REST Client (https://marketplace.visualstudio.com/items?itemName=humao.rest-client) para testes diretamente pelo arquivo products.http, bastando preencher os campos do product e clicar em Send Request depois de ter inicializado a aplicação com o atalho Ctrl + Shift + P > Debug: Start Debugging
+
+Outra alternativa para realizar testes com a API:
+
+- POSTMAN (https://www.postman.com/)
+
 ## Banco de dados:
+
+O Banco de dados utilizado a API é o Azure Cosmos DB - Núcleo (SQL) para trabalhar com documentos. 
+
+Para utilização correta, após sua criação, deverá substituir as informaçõs das variáveis no arquivo: 
+
+```
+src/local.settings.json
+```
+
+Substituir as informações conforme abaixo:
+
+```
+"DatabaseName": "name_db",
+"ContainerName": "name_container",
+"CosmosDBConnectionString": "conection_string_db;"
+```

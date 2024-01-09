@@ -1,4 +1,5 @@
 using System.Net;
+using System.Runtime.InteropServices;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
@@ -15,16 +16,36 @@ namespace MyEcommerce.Products
         }
 
         [Function("Products")]
-        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req)
+        public ProductBindings Run([HttpTrigger(AuthorizationLevel.Anonymous, "post")] HttpRequestData req, ProductDTO product)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            response.WriteString("Welcome to Azure Functions! Deploy test trigger branch main");
+            response.WriteString("Welcome to Azure Functions!");
 
-            return response;
+            if(req.Method == "POST") { return Create(req, product); }
+
+            return new ProductBindings
+            {
+                HttpResponse = response,
+            };
+        }
+
+        private static ProductBindings Create(HttpRequestData req, ProductDTO product)
+        {
+            var response = req.CreateResponse(HttpStatusCode.OK);
+            response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+
+            product.Id = Guid.NewGuid().ToString();
+            response.WriteString($"{product.Id}");
+
+            return new ProductBindings
+            {
+                HttpResponse = response,
+                Product = product
+            };
         }
     }
 }
