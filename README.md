@@ -102,4 +102,20 @@ Após a execução desta etapa, poderá verificar que o Grupo de recursos foi cr
 
 Após o provisionamento da infraestrutura, deverá executar o arquivo deploy_checkout.sh (backend/deploy_checkout.sh) para que seja provisionado o código da API na Azure Functions e poderá observar que a Function foi criada e já estará disponível para acesso pela URL da função gerada na Azure.
 
+Para criação do CI/CD Pipelines com GitHub Actions é necessário a geração de uma service principal, para conectar o GitHub Actions com a Azure Functions, para isso, poderá ser gerado pelo comando abaixo no prompt:
+
+```
+az ad sp create-for-rbac --name "name_app-sp" --sdk-auth --role contributor --scopes /subscriptions/id_subscription/resourcegroups/name_resource_group/providers/Microsoft.Web/sites/name_app
+```
+
+Esse comando irá gerar uma service principal que deverá ser utilizada para autenticação no GitHub Actions e deverá ter o nome abaixo: 
+
+```
+Settings/Secrets and variables/Actions/New repository secret
+
+AZURE_CREDS_FUNCTION_APP
+```
+
+Após adionado esta secret, toda vez que houver alguma alteração no código e for publicado na branch main, será realizado um 
+
 ## Banco de dados:

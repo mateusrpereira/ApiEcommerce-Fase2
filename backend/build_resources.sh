@@ -2,8 +2,8 @@
 # exit when any command fails
 set -e
 
-TENANT=""
-SUBSCRIPTION=""
+TENANT="c2170b64-c4b3-4d4d-996f-1d1565557252"
+SUBSCRIPTION="72577fc5-ca6e-4c91-a1da-6e3d92d63524"
 LOCATION="brazilsouth"
 
 RESOURCEGROUP="rg-ecommerce"
