@@ -2,9 +2,21 @@ POST http://localhost:7071/api/Products
 
 {
     "product": {
-        "Reference": "POSTECH123",
-        "Desc": "Produto 1",
-        "Price": 50,
-        "Category": "Shoes"
+        "Reference": "",
+        "Desc": "",
+        "Price": ,
+        "Category": ""
     }
 }
+
+PUT http://localhost:7071/api/Products
+
+{
+    "product": {
+        "Reference": "",
+        "Desc": "",
+        "Price": ,
+        "Category": ""
+    }
+}
+
