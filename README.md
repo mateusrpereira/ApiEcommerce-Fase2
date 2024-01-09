@@ -82,5 +82,24 @@ Deverá ser informado obrigatoriamente o campo Id e Category, conforme exemplo a
 
 ## Execução:
 
+Para provisionamento da infraestrutura (Infra-As-Code) na Azure, deverá ser preenchido os campos no arquivo build.resources.sh (backend/build_resources.sh) com seus devidos valores e executá-lo utilizando o Git Bash, para isso, deverá estar logado na conta pelo terminal (comando: az login) de acordo com sua conta na Azure, conforme abaixo:
+
+```
+TENANT="id_do_diretorio"
+SUBSCRIPTION="id_da_assinatura"
+LOCATION="brazilsouth"
+```
+
+```
+RESOURCEGROUP="rg-name"
+```
+
+Após a execução desta etapa, poderá verificar que o Grupo de recursos foi criado com os itens:
+- Azure Cosmos DB account
+- Conta de armazenamento
+- Plano do Serviço do Aplicativo
+- Aplicativo de Funções
+
+Após o provisionamento da infraestrutura, deverá executar o arquivo deploy_checkout.sh (backend/deploy_checkout.sh) para que seja provisionado o código da API na Azure Functions e poderá observar que a Function foi criada e já estará disponível para acesso pela URL da função gerada na Azure.
 
 ## Banco de dados:
