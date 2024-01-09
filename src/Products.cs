@@ -22,7 +22,7 @@ namespace MyEcommerce.Products
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            response.WriteString("Welcome to Azure Functions! Deploy test");
+            response.WriteString("Welcome to Azure Functions! Deploy test trigger");
 
             return response;
         }
