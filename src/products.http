@@ -21,14 +21,23 @@
 #     }
 # }
 
-DELETE http://localhost:7071/api/Products
+# DELETE http://localhost:7071/api/Products
+
+# {
+#     "product": {
+#         "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
+#         "Reference": "DEF456",
+#         "Desc": "Produto 1",
+#         "Price": 180,
+#         "Category": "Masculino"
+#     }
+# }
+
+GET http://localhost:7071/api/Products
 
 {
     "product": {
         "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
-        "Reference": "DEF456",
-        "Desc": "Produto 1",
-        "Price": 180,
-        "Category": "Masculino"
+        "partitionKey": "Masculino"
     }
 }
