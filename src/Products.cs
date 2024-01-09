@@ -16,7 +16,7 @@ namespace MyEcommerce.Products
         }
 
         [Function("Products")]
-        public ProductBindings Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", "put")] HttpRequestData req, ProductDTO product)
+        public ProductBindings Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", "put", "delete")] HttpRequestData req, ProductDTO product)
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
 
@@ -27,6 +27,7 @@ namespace MyEcommerce.Products
 
             if(req.Method == "POST") { return Create(req, product); }
             if (req.Method == "PUT") { return Update(req, product); }
+            if (req.Method == "DELETE") { return Delete(req, product); }
 
             return new ProductBindings
             {
@@ -64,6 +65,30 @@ namespace MyEcommerce.Products
             }
 
             response.WriteString($"Record {product.Id} updated");
+
+            return new ProductBindings
+            {
+                HttpResponse = response,
+                Product = product
+            };
+        }
+
+        private static ProductBindings Delete(HttpRequestData req, ProductDTO product)
+        {
+            var response = req.CreateResponse(HttpStatusCode.OK);
+            response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
+
+            if (string.IsNullOrEmpty(product.Id))
+            {
+                response.WriteString("Product ID is required");
+                response.StatusCode = HttpStatusCode.BadRequest;
+                var resp = new ProductBindings { HttpResponse = response };
+                return resp;
+            }
+
+            product.SetAsDeleted();
+
+            response.WriteString($"Record {product.Id} delete");
 
             return new ProductBindings
             {
