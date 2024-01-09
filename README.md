@@ -116,6 +116,13 @@ Settings/Secrets and variables/Actions/New repository secret
 AZURE_CREDS_FUNCTION_APP
 ```
 
-Após adionado esta secret, toda vez que houver alguma alteração no código e for publicado na branch main, será realizado um 
+Após adionado esta secret, toda vez que houver alguma alteração no código e for publicado na branch main, será realizado o build e irá ser publicada as alterações na Azure Functions.
+
+OBS.: Caso o build não seja executado de forma automática, verifique a branch em que realizou o commit com as alterações ou use o comando abaixo manualmente no Git Bash se preferir dentro da pasta onde está as funções, neste casso a /src:
+
+```
+
+func azure functionapp publish name_function_app
+```
 
 ## Banco de dados:
