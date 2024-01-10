@@ -50,49 +50,49 @@
 
 # Testes Azure:
 
-POST https://ecommerceapppostech.azurewebsites.net/api/Products?
-
-{
-    "product": {
-        "Reference": "TESTE123",
-        "Desc": "Prod 123",
-        "Price": 123,
-        "Category": "Masc"
-    }
-}
-
-# PUT http://localhost:7071/api/Products
+# POST https://ecommerceapppostech.azurewebsites.net/api/Products?
 
 # {
 #     "product": {
-#         "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
-#         "Reference": "DEF456",
-#         "Desc": "Produto 1",
-#         "Price": 180,
-#         "Category": "Masculino"
+#         "Reference": "TESTE123",
+#         "Desc": "Prod 123",
+#         "Price": 123,
+#         "Category": "Masc"
 #     }
 # }
 
-# DELETE http://localhost:7071/api/Products
+# PUT https://ecommerceapppostech.azurewebsites.net/api/Products?
 
 # {
 #     "product": {
-#         "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
-#         "Reference": "DEF456",
-#         "Desc": "Produto 1",
-#         "Price": 180,
-#         "Category": "Masculino"
+#         "id": "91e96f0a-f143-4d49-8336-44486b0526d6",
+#         "Reference": "tst123",
+#         "Desc": "Prod123update",
+#         "Price": 12345,
+#         "Category": "Masc"
 #     }
 # }
 
-# GET http://localhost:7071/api/GetProductById
+# DELETE https://ecommerceapppostech.azurewebsites.net/api/Products?
 
 # {
-#     "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
-#     "partitionKey": "Masculino"
+#     "product": {
+#         "id": "91e96f0a-f143-4d49-8336-44486b0526d6",
+#         "Reference": "tst123",
+#         "Desc": "Prod123update",
+#         "Price": 12345,
+#         "Category": "Masc"
+#     }
 # }
 
-# GET http://localhost:7071/api/GetProductsByCategory
+# GET https://ecommerceapppostech.azurewebsites.net/api/GetProductById
+
+# {
+#     "id": "91e96f0a-f143-4d49-8336-44486b0526d6",
+#     "partitionKey": "Masc"
+# }
+
+# GET https://ecommerceapppostech.azurewebsites.net/api/GetProductsByCategory
 
 # {
 #     "partitionKey": "Masculino"
