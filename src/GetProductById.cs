@@ -3,8 +3,9 @@ using System.Text.Json;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
+using MyEcommerce.Products;
 
-namespace MyEcommerce.Products
+namespace MyEcommerce.GetProductById
 {
     public class GetProductById
     {
