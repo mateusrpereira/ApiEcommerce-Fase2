@@ -22,8 +22,6 @@ namespace MyEcommerce.GetProductsByCategory
         [CosmosDBInput(databaseName:"%DatabaseName%", 
                        containerName:"%ContainerName%", 
                        Connection = "CosmosDBConnectionString",
-                       //SqlQuery = "SELECT * FROM c WHERE c.Category = {category}",
-                       //SqlQuery = "SELECT * FROM c WHERE c.Category = {category} and c.Deleted = true",
                        PartitionKey = "{partitionKey}")] List<ProductDTO> products
         )
         {

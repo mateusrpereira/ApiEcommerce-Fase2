@@ -1,3 +1,5 @@
+# Testes local:
+
 # POST http://localhost:7071/api/Products
 
 # {
@@ -33,12 +35,62 @@
 #     }
 # }
 
-GET http://localhost:7071/api/GetProductById
+# GET http://localhost:7071/api/GetProductById
+
+# {
+#     "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
+#     "partitionKey": "Masculino"
+# }
+
+# GET http://localhost:7071/api/GetProductsByCategory
+
+# {
+#     "partitionKey": "Masculino"
+# }
+
+# Testes Azure:
+
+POST https://ecommerceapppostech.azurewebsites.net/api/Products?
 
 {
-    "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
-    "partitionKey": "Masculino"
+    "product": {
+        "Reference": "TESTE123",
+        "Desc": "Prod 123",
+        "Price": 123,
+        "Category": "Masc"
+    }
 }
+
+# PUT http://localhost:7071/api/Products
+
+# {
+#     "product": {
+#         "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
+#         "Reference": "DEF456",
+#         "Desc": "Produto 1",
+#         "Price": 180,
+#         "Category": "Masculino"
+#     }
+# }
+
+# DELETE http://localhost:7071/api/Products
+
+# {
+#     "product": {
+#         "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
+#         "Reference": "DEF456",
+#         "Desc": "Produto 1",
+#         "Price": 180,
+#         "Category": "Masculino"
+#     }
+# }
+
+# GET http://localhost:7071/api/GetProductById
+
+# {
+#     "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
+#     "partitionKey": "Masculino"
+# }
 
 # GET http://localhost:7071/api/GetProductsByCategory
 

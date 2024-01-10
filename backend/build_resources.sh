@@ -7,8 +7,8 @@ SUBSCRIPTION="72577fc5-ca6e-4c91-a1da-6e3d92d63524"
 LOCATION="brazilsouth"
 
 RESOURCEGROUP="rg-ecommerce"
-STORAGEACCOUNTNAME="ecommerceaccount"
-APPNAME="ecommerceapppostech"
+# STORAGEACCOUNTNAME="ecommerceaccount"
+# APPNAME="ecommerceapppostech"
 
 do_login()
 {
@@ -37,7 +37,7 @@ do_function_app()
     --name CheckoutFunctionApp \
     --resource-group $RESOURCEGROUP \
     --template-file azuredeploy.json \
-    --parameters appName=$APPNAME storageAccountName=$STORAGEACCOUNTNAME \
+    --parameters azuredeploy.parameters.json \
     --verbose
     echo "End function App"
 }
