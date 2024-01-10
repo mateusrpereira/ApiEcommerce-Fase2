@@ -151,3 +151,19 @@ Substituir as informações conforme abaixo:
 "ContainerName": "name_container",
 "CosmosDBConnectionString": "conection_string_db;"
 ```
+
+## Links úteis - Documentação Microsoft
+
+- https://azure.microsoft.com/en-us/free/
+
+- https://azure.microsoft.com/en-us/products/functions/?ef_id=Cj0KCQiAyMKbBhD1ARIsANs7rEFF3-SZBw7XQbwmuaJ_Hu4DTun16IOnWeAZ9xhdRwr0vMTzCdjgRuMaAlEJEALw_wcB%3AG%3As&OCID=AIDcmmsmruuku2_SEM_Cj0KCQiAyMKbBhD1ARIsANs7rEFF3-SZBw7XQbwmuaJ_Hu4DTun16IOnWeAZ9xhdRwr0vMTzCdjgRuMaAlEJEALw_wcB%3AG%3As&gclid=Cj0KCQiAyMKbBhD1ARIsANs7rEFF3-SZBw7XQbwmuaJ_Hu4DTun16IOnWeAZ9xhdRwr0vMTzCdjgRuMaAlEJEALw_wcB
+
+- https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale
+
+- https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2-input?tabs=python-v2%2Cin-process%2Cnodejs-v4%2Cfunctionsv2&pivots=programming-language-csharp#http-trigger-get-multiple-docs-using-documentclient-c
+
+- https://learn.microsoft.com/en-us/azure/azure-functions/functions-dotnet-class-library?tabs=v4%2Ccmd
+
+- https://learn.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-in-process-differences
+
+- https://learn.microsoft.com/en-us/azure/templates/microsoft.documentdb/databaseaccounts?pivots=deployment-language-arm-template

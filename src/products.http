@@ -65,7 +65,7 @@
 
 # {
 #     "product": {
-#         "id": "91e96f0a-f143-4d49-8336-44486b0526d6",
+#         "id": "fabbe648-0db5-4908-b991-78de991f01aa",
 #         "Reference": "tst123",
 #         "Desc": "Prod123update",
 #         "Price": 12345,
@@ -77,7 +77,7 @@
 
 # {
 #     "product": {
-#         "id": "91e96f0a-f143-4d49-8336-44486b0526d6",
+#         "id": "fabbe648-0db5-4908-b991-78de991f01aa",
 #         "Reference": "tst123",
 #         "Desc": "Prod123update",
 #         "Price": 12345,
@@ -88,12 +88,12 @@
 # GET https://ecommerceapppostech.azurewebsites.net/api/GetProductById
 
 # {
-#     "id": "91e96f0a-f143-4d49-8336-44486b0526d6",
+#     "id": "fabbe648-0db5-4908-b991-78de991f01aa",
 #     "partitionKey": "Masc"
 # }
 
 # GET https://ecommerceapppostech.azurewebsites.net/api/GetProductsByCategory
 
 # {
-#     "partitionKey": "Masculino"
+#     "partitionKey": "Masc"
 # }
