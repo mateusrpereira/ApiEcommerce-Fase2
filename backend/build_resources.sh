@@ -7,8 +7,6 @@ SUBSCRIPTION="72577fc5-ca6e-4c91-a1da-6e3d92d63524"
 LOCATION="brazilsouth"
 
 RESOURCEGROUP="rg-ecommerce"
-# STORAGEACCOUNTNAME="ecommerceaccount"
-# APPNAME="ecommerceapppostech"
 
 do_login()
 {
