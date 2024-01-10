@@ -33,11 +33,14 @@
 #     }
 # }
 
-GET http://localhost:7071/api/Products
+# GET http://localhost:7071/api/GetProductById
 
+# {
+#     "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
+#     "partitionKey": "Masculino"
+# }
+
+GET http://localhost:7071/api/GetProductsByCategory
 {
-    "product": {
-        "id": "21c3c4ab-fe31-47f8-9f3c-6e30e7d0d8f9",
-        "partitionKey": "Masculino"
-    }
+    "partitionKey": "Masculino"
 }
